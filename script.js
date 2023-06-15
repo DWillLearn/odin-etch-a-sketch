@@ -11,7 +11,17 @@ const makeGrid = () => {
   for (let i = 0; i < 256; i++) {
     makeSquare();
   }
+  hoverSquare();
 };
 
+//Set up hover effect so div changes color when passed over and stays color
+const hoverSquare = () => {
+  let allSquares = Array.from(document.querySelectorAll(".grid-square"));
+  allSquares.forEach((square) => {
+    square.addEventListener("mouseover", () => {
+      square.style.backgroundColor = "purple";
+    });
+  });
+};
 //Load squares on window load
 window.addEventListener("load", makeGrid());
