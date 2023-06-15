@@ -27,19 +27,23 @@ const hoverSquare = () => {
 
 //Add button to top of the screen that generates different grid size
 const newGrid = () => {
+  let body = document.querySelector("body");
   //Create button
   let gridBtn = document.createElement("button");
   gridBtn.classList.add("generate-grid");
   gridBtn.textContent = "New Grid";
   //Append button to top of screen
-  container.appendChild(gridBtn);
-
+  body.appendChild(gridBtn);
   //Add event listener to button
   gridBtn.addEventListener("click", () => {
     let gridSize = prompt("Enter number of squares per side");
     if (gridSize < 100) {
+      //Remove grid and replace with new one
+      container.innerHTML = "";
+      makeGrid(gridSize);
     } else {
-      return "Error! Number too big";
+      //Change to something on screen later
+      console.log("Error! Number too big");
     }
   });
 };
