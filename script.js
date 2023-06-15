@@ -6,9 +6,10 @@ const makeSquare = () => {
   container.appendChild(newSquare);
 };
 
-//Function to create 256 squares for 16x16 grid
-const makeGrid = () => {
-  for (let i = 0; i < 256; i++) {
+//Function to create grid based on argument
+const makeGrid = (num) => {
+  let squareNum = Math.pow(num, 2);
+  for (let i = 0; i < squareNum; i++) {
     makeSquare();
   }
   hoverSquare();
@@ -29,13 +30,22 @@ const newGrid = () => {
   //Create button
   let gridBtn = document.createElement("button");
   gridBtn.classList.add("generate-grid");
-  gridBtn.textContent = "Enter new grid size";
+  gridBtn.textContent = "New Grid";
   //Append button to top of screen
   container.appendChild(gridBtn);
+
+  //Add event listener to button
+  gridBtn.addEventListener("click", () => {
+    let gridSize = prompt("Enter number of squares per side");
+    if (gridSize < 100) {
+    } else {
+      return "Error! Number too big";
+    }
+  });
 };
 
 //Load squares on window load
 window.addEventListener("load", () => {
-  makeGrid();
+  makeGrid(16);
   newGrid();
 });
