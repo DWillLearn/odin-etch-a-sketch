@@ -1,0 +1,31 @@
+/*CSS Reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 45%;
+}
+
+.grid-square {
+  border: 1px black solid;
+  width: 8rem;
+  height: 8rem;
+}
