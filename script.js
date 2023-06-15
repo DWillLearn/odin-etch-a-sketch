@@ -23,5 +23,19 @@ const hoverSquare = () => {
     });
   });
 };
+
+//Add button to top of the screen that generates different grid size
+const newGrid = () => {
+  //Create button
+  let gridBtn = document.createElement("button");
+  gridBtn.classList.add("generate-grid");
+  gridBtn.textContent = "Enter new grid size";
+  //Append button to top of screen
+  container.appendChild(gridBtn);
+};
+
 //Load squares on window load
-window.addEventListener("load", makeGrid());
+window.addEventListener("load", () => {
+  makeGrid();
+  newGrid();
+});
