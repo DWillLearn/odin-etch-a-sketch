@@ -15,6 +15,7 @@ const makeGrid = (num) => {
     makeSquare();
   }
   hoverSquare();
+  newGrid();
 };
 
 //Set up hover effect so div changes color when passed over and stays color
