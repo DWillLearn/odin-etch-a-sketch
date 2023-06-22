@@ -35,15 +35,17 @@ const addGridBtn = (container) => {
 const makeGrid = (num) => {
   let squareNum = Math.pow(num, 2);
   for (let i = 0; i < squareNum; i++) {
-    makeSquare();
+    makeSquare(num);
   }
+
   hoverSquare();
 };
 //Function to create a singular square and add it to grid box
-const makeSquare = () => {
+const makeSquare = (size) => {
   let gridBox = document.querySelector(".grid-box");
   let newSquare = document.createElement("div");
   newSquare.classList.add("grid-square");
+  newSquare.style.width = `calc(100% / ${size})`;
   gridBox.appendChild(newSquare);
 };
 
