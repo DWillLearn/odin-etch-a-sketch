@@ -14,13 +14,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.container {
+  flex-direction: column-reverse;
 }
 
 .grid-box {
-  border: 1rem solid pink;
+  border: 0.5rem solid pink;
+  display: flex;
+  /* width: 100%; */
 }
 
 .grid-square {
