@@ -20,7 +20,13 @@ body {
 .grid-box {
   border: 0.5rem solid pink;
   display: flex;
-  /* width: 100%; */
+  width: 40vw;
+}
+
+.grid-box::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
 .grid-square {
