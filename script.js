@@ -60,7 +60,7 @@ const hoverSquare = () => {
   let allSquares = Array.from(document.querySelectorAll(".grid-square"));
   allSquares.forEach((square) => {
     square.addEventListener("mouseover", () => {
-      square.style.backgroundColor = "#F2BDD6";
+      square.style.backgroundColor = "red";
     });
   });
 };
