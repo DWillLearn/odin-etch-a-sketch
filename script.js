@@ -55,12 +55,12 @@ const makeSquare = (size) => {
   gridBox.appendChild(newSquare);
 };
 
-//Set up hover effect so div changes color when passed over and stays color
+//Set up hover effect so div changes to a random color
 const hoverSquare = () => {
   let allSquares = Array.from(document.querySelectorAll(".grid-square"));
   allSquares.forEach((square) => {
     square.addEventListener("mouseover", () => {
-      square.style.backgroundColor = "red";
+      square.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
     });
   });
 };
