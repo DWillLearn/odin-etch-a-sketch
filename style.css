@@ -14,7 +14,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+  font-size: 5rem;
+}
+
+.generate-grid {
+  font-size: 2rem;
+  padding: 1rem;
+  order: 0;
+}
+
+.size-error {
+  order: 1;
+  font-size: 2rem;
 }
 
 .grid-box {
@@ -26,14 +42,10 @@ body {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  order: 2;
 }
 
 .grid-square {
   aspect-ratio: inherit;
   border: 0.1px solid black;
 }
-
-.generate-grid {
-}
-
-/*Next:Make it so amount of pixels used is unchanged even after grid generation*/
