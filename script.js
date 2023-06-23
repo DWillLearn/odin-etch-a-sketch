@@ -20,13 +20,19 @@ const addGridBtn = (container) => {
   //Add event listener to button
   gridBtn.addEventListener("click", () => {
     let gridSize = prompt("Enter number of squares per side");
-    if (gridSize < 100) {
+    let error = document.createElement("p");
+    error.classList.add("size-error");
+    error.textContent = "Error! Number too big";
+    if (document.querySelector(".size-error")) {
+      error = document.querySelector(".size-error");
+      body.removeChild(error);
+    }
+    if (gridSize <= 100) {
       //Remove grid and replace with new one
       container.innerHTML = "";
       makeGrid(gridSize);
     } else {
-      //Change to something on screen later
-      console.log("Error! Number too big");
+      body.appendChild(error);
     }
   });
 };
